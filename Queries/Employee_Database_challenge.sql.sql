@@ -79,3 +79,21 @@ INTO unique_titles
 FROM retirement_titles
 WHERE (to_date = '9999-01-01')
 ORDER BY emp_no ASC, to_date DESC;
+
+SELECT COUNT(title), title
+INTO retiring_titles
+FROM unique_titles
+GROUP BY title
+ORDER BY COUNT(title) DESC
+
+SELECT DISTINCT ON (emp_no) a.emp_no, a.first_name, a.last_name, a.birth_date, 
+b.from_date, b.to_date, c.title
+INTO mentorship_eligibility
+FROM employees as a
+INNER JOIN dept_emp as b
+ON (a.emp_no = b.emp_no)
+RIGHT JOIN titles as c
+ON (a.emp_no = c.emp_no)
+WHERE (birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+AND (b.to_date = '9999-01-01')
+ORDER BY emp_no;
