@@ -15,7 +15,7 @@ The purpose of this analysis is to determine how Pewlet-Hackard will transition 
  
  ## Summary
  
-The number of retiring employees based on the unique_titles csv, there are 72,458 unique employees who are retiring. This is substantially more than h=those available to be mentored.
+The number of retiring employees based on the unique_titles csv, there are 72,458 unique employees who are retiring. This is substantially more than those available to be mentored.
 
 ![retiring_employees](Resources/retiring_employees.png)
 ![mentorship_eligibility_count](Resources/mentorship_eligibility_count.png)
